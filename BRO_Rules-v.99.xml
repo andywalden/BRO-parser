@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nitro_policy esm="2770:593C" time="02/18/2017 09:58:57" user="" build="9.6.0 20161019012049MR6" model="ETM-X6" version="9006000">
+  <rules count="39">
+    <rule>
+      <id>5000135</id>
+      <normid>671088640</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Suricata-Malware</message>
+      <description>Sep 26 16:00:04 tds-sensor suricata 
+09/26/2016-15:35:18.819724  [**] [1:2002196:4] ET MALWARE Casalemedia Spyware Reporting URL Visited 2 [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 10.10.7.101:58184 -&gt; 165.254.210.96:80</description>
+      <origin>1</origin>
+      <severity>60</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Suricata-Malware";adsid:522;content:"suricata";pcre:"(\d{1,2}\/\d{1,2}\/\d{1,4}-\d{1,2}:\d{1,2}:\d{1,2}.\d+)\s+\[\*\*\]\s\[(.*?)\]\s(.*?)\s+\[\*\*\]\s\[Classification:\s(A Network Trojan was detected)\]\s\[Priority:\s(\d)\]\s\{(.*?)\}\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):(\d+)\s->\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):(\d+)";var@{Category}:${1:4};var@{dst_ip}:${1:9};var@{dst_port}:${1:10};var@{firsttime,lasttime}:${1:1};var@{protocol}:${1:6};var@{severity}:${1:5};var@{sigdesc}:${1:3};var@{sigid}:${1:2};var@{src_ip}:${1:7};var@{src_port}:${1:8};)]]></text>
+    </rule>
+    <rule>
+      <id>5000136</id>
+      <normid>805306368</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Suricata Alert</message>
+      <description>Sep 23 16:40:06 tds-sensor suricata
+ 09/23/2016-16:36:40.048590  [**] [1:2012648:3] ET POLICY Dropbox Client Broadcasting [**] [Classification: Potential Corporate Privacy Violation] [Priority: 1] {UDP} 10.10.24.40:17500 -&gt; 255.255.255.255:17500</description>
+      <origin>1</origin>
+      <severity>40</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Suricata Alert";adsid:522;content:"suricata";pcre:"(\d{1,2}\/\d{1,2}\/\d{1,4}-\d{1,2}:\d{1,2}:\d{1,2}.\d+)\s+\[\*\*\]\s\[(.*?)\]\s(.*?)\s+\[\*\*\]\s\[Classification:\s(.*?)\]\s\[Priority:\s(\d)\]\s\{(.*?)\}\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):(\d+)\s->\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):(\d+)";var@{Category}:${1:4};var@{dst_ip}:${1:9};var@{dst_port}:${1:10};var@{firsttime,lasttime}:${1:1};var@{protocol}:${1:6};var@{severity}:${1:5};var@{sigdesc}:${1:3};var@{sigid}:${1:2};var@{src_ip}:${1:7};var@{src_port}:${1:8};)]]></text>
+    </rule>
+    <rule>
+      <id>5000167</id>
+      <normid>1344274432</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Bro SSH Version Reported</message>
+      <description>Dec 10 03:38:58 tds-sensor bro_ssh 1481340834.243514	Cs3uKy1bvwbaRlXHI7	10.25.100.60	35418	10.10.0.74	22	2	-	-	-	SSH-2.0-OpenSSH_6.6.1	-	-	-	-	-	-	-	-	-	-	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Bro SSH Version Reported";adsid:522;content:"bro_ssh";pcre:"((?:\d{10}\x2e\d{6})|(?:\x2d))\t[^\t]+\t([^\t]+)\t(\d+)\t([^\t]+)\t(\d+)\t(\d+)\t[^\t]+\t[^\t]+\t[^\t]+\t([^\t]+)";var@{dst_ip}:${1:4};var@{dst_port}:${1:5};var@{firsttime}:${1:1};var@{Process_Name}:${1:7};var@{src_ip}:${1:2};var@{src_port}:${1:3};var@{Version}:${1:6};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000129</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Bro SSH Session Failed</message>
+      <description>Jun 13 11:00:18 log-server bro_ssh: 1465200724.111387	Cqy1e42mbpmxwdmEg1	10.10.72.18	51529	10.10.0.70	22	2	F	-	SSH-2.0-OpenSSH_5.1	SSH-2.0-OpenSSH_5.8p1 Debian-1ubuntu3	aes128-ctr	hmac-md5	none	diffie-hellman-group-exchange-sha256	ssh-rsa	99:9d:72:83:4a:e4:e0:3f:36:70:fb:ca:f4:1c:7f:19	-	-	-	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Bro SSH Session Failed";adsid:522;content:"bro_ssh";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(F)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{action}:${1:8};var@{Client_Version}:${1:10};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{firsttime}:${1:1};var@{Hash}:${1:13};var@{Hash_Type}:${1:15};var@{Method}:${1:12};var@{Service_Name}:${1:11};var@{src_ip}:${1:3};var@{src_port}:${1:4};var@{Target_Context}:${1:17};var@{Version}:${1:7};fmt@firsttime:"%s.%.6f";map@{action=9}:"F"="9";)]]></text>
+    </rule>
+    <rule>
+      <id>5000128</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Bro SSH Session Established</message>
+      <description>Jun 13 11:00:18 log-server bro_ssh: 1465200724.111387	Cqy1e42mbpmxwdmEg1	10.10.72.18	51529	10.10.0.70	22	2	T	-	SSH-2.0-OpenSSH_5.1	SSH-2.0-OpenSSH_5.8p1 Debian-1ubuntu3	aes128-ctr	hmac-md5	none	diffie-hellman-group-exchange-sha256	ssh-rsa	99:9d:72:83:4a:e4:e0:3f:36:70:fb:ca:f4:1c:7f:19	-	-	-	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Bro SSH Session Established";adsid:522;content:"bro_ssh";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(T)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{action}:${1:8};var@{Client_Version}:${1:10};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{firsttime}:${1:1};var@{Hash}:${1:13};var@{Hash_Type}:${1:15};var@{Method}:${1:12};var@{Service_Name}:${1:11};var@{src_ip}:${1:3};var@{src_port}:${1:4};var@{Target_Context}:${1:17};var@{Version}:${1:7};fmt@firsttime:"%s.%.6f";map@{action=8}:"T"="8";)]]></text>
+    </rule>
+    <rule>
+      <id>5000142</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Bro SMB Mapping</message>
+      <description>Oct 14 16:21:50 tds-sensor bro_smb_mapping 1476462109.451919	CxKPHC1b8m55KjXBN7	10.30.10.35	59930	10.10.1.201	445	\\\\IRPM-DC-02.inforeliance.com\\sysvol	-	-	DISK
+&lt;142&gt;Dec 10 02:30:47 tds-sensor bro_smb_mapping -	C2SMnN3DOqIm3mansf	10.10.0.133	1243	10.10.0.114	139	-	IPC	-	PIPE</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Bro SMB Mapping";adsid:522;content:"bro_smb_mapping";pcre:"((\d{10}\x2e\d{6})|(?:\x2d))\t[^\t]+\t([^\t]+)\t(\d+)\t([^\t]+)\t(\d+)\t([^\t]+)\t([^\t]+)";raw;var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{firsttime}:${1:1};var@{Service_Name}:${1:8};var@{Share_Name}:${1:7};var@{src_ip}:${1:3};var@{src_port}:${1:4};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000138</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Bro SMB File Transfer</message>
+      <description>Sep 27 14:09:51 tds-sensor bro_smb_files 1474985381.503139	CkmhiX1MTnP973pJ14	10.10.24.111	65528	10.10.0.107	445	-	SMB::FILE_OPEN	\\\\IRPM-FPS-01.inforeliance.com\\Clients	DOJ\\DOJ JCON\\MCS Docs\\F87ECB1D.tmp	0	-	1474985362.935231	1474985362.935231	1474985362.935231	1474985362.935231</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Bro SMB File Transfer";adsid:522;content:"bro_smb_files";pcre:"((\d{10}\x2e\d{6})|(?:\x2d))\t[^\t]+\t([^\t]+)\t(\d+)\t([^\t]+)\t(\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)";var@{action}:${1:8};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{File_Path}:${1:9};var@{File_Size}:${1:11};var@{Filename}:${1:10};var@{firsttime,lasttime}:${1:1};var@{Old_Value}:${1:12};var@{src_ip}:${1:3};var@{src_port}:${1:4};fmt@{firsttime, lasttime}:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000143</id>
+      <normid>402653184</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Bro Kerberos Request</message>
+      <description>Oct 14 16:21:50 tds-sensor bro_kerberos 1476462108.794013	CCCIpi1F0XgrIroRN6	10.50.0.156	65255	10.10.1.216	88	TGS	-	devsql2014$@DEV.INFORELIANCE.COM	F	KDC_ERR_BADOPTION	-	1476462979.000000	-	T	T	-	-	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Bro Kerberos Request";adsid:522;content:"bro_kerberos";pcre:"(\d{10}\x2e\d{6})\t[^\t]+\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)";var@{action,ObjectID}:${1:9};var@{dst_ip}:${1:4};var@{dst_port}:${1:5};var@{firsttime}:${1:1};var@{Request_Type}:${1:6};var@{session_id,src_ip}:${1:2};var@{src_port}:${1:3};var@{Status}:${1:10};var@{UserIDSrc}:${1:8};fmt@firsttime:"%s.%.6f";map@{action=5}:"T"="8","F"="9";)]]></text>
+    </rule>
+    <rule>
+      <id>5000173</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Bro HTTP POST Submitted</message>
+      <description/>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Bro HTTP POST Submitted";adsid:522;content:"bro_http";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(POST)\t([^\t]+)\t([^\t]+)\t([^\t]+)";var@{CommandID}:${1:8};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{DomainID}:${1:9};var@{firsttime}:${1:1};var@{Referer}:${1:11};var@{src_ip}:${1:3};var@{src_port}:${1:4};var@{URL}:${1:10};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000126</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Bro HTTP GET Request</message>
+      <description>Jun  7 11:00:15 log-server bro_http: 1465185599.824028	CZBvCY2eyNKhnzBhDb	10.10.90.7	63484	165.254.169.123	80	1	GET	crl.microsoft.com	/pki/crl/products/MicCodSigPCA_08-31-2010.crl	-	1.1	Microsoft-CryptoAPI/6.1	0	1990	307	Proxy Redirect	-	-	-	(empty)	-	-	-	-	-	FvGG5COcQuV3tmVi5	text/html</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Bro HTTP GET Request";adsid:522;content:"bro_http";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{CommandID}:${1:8};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{DomainID}:${1:9};var@{firsttime}:${1:1};var@{Referer}:${1:11};var@{Session_Status}:${1:17};var@{src_ip}:${1:3};var@{src_port}:${1:4};var@{Status}:${1:16};var@{URL}:${1:10};var@{User_Agent}:${1:13};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000137</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>Bro DCE-RPC</message>
+      <description>Sep 26 16:01:45 tds-sensor bro_dce_rpc 
+1474905660.941775	CwSFKC1RqS26u3CvJ	10.10.50.55	64115	10.10.0.191	135	-	-	IRemoteSCMActivator	RemoteCreateInstance</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"Bro DCE-RPC";adsid:522;content:"bro_dce_rpc";pcre:"(\d{10}\x2e\d{6})\t[^\t]+\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t[^\t]+\t[^\t]+\t[^\t]+\t([^\t]+)";var@{CommandID}:${1:6};var@{dst_ip}:${1:4};var@{dst_port}:${1:5};var@{firsttime,lasttime}:${1:1};var@{sigdesc}:"BRO RPC "${1:6};var@{src_ip}:${1:2};var@{src_port}:${1:3};)]]></text>
+    </rule>
+    <rule>
+      <id>5000117</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO X509 Cert Exchanged</message>
+      <description>&lt;142&gt;Aug 30 14:37:13 tds-sensor bro_x509 1472567831.549073	FUJ09r3cVpp354fdi9	3	5A00020E4289E78C6958489EC1000100020E42	CN=outlook.com,OU=Microsoft Corporation,O=Microsoft Corporation,L=Redmond,ST=WA,C=US	CN=Microsoft IT SSL SHA2,OU=Microsoft IT,O=Microsoft Corporation,L=Redmond,ST=Washington,C=US	1444774804.000000	1507846804.000000	rsaEncryption	sha256WithRSAEncryption	rsa	2048	65537	-	outlook.com,*.outlook.com,office365.com,*.office365.com,*.live.com,*.internal.outlook.com,*.outlook.office365.com,outlook.office.com,attachment.outlook.office.net,attachment.outlook.officeppe.net,*.office.com	-	-	-	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO X509 Cert Exchanged";adsid:522;content:"bro_x509";pcre:"(\d{10}\x2e\d{6})\t[^\t]+\t([^\t]+)\t([^\t]+)\t([^\t]+)";var@{firsttime}:${1:1};var@{ObjectID}:${1:4};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000162</id>
+      <normid>1083179008</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Tunnel Event</message>
+      <description>Dec  9 23:05:32 tds-sensor bro_tunnel 1481324730.969506	CWb00qbioCc4jai26	10.10.200.66	54113	65.55.158.118	3544	Tunnel::TEREDO	Tunnel::DISCOVER</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Tunnel Event";adsid:522;content:"bro_tunnel";pcre:"(\d{10}\x2e\d{6})\t[^\t]+\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)";var@{CommandID}:${1:7};var@{dst_ip}:${1:4};var@{dst_port}:${1:5};var@{firsttime}:${1:1};var@{Service_Name}:${1:6};var@{src_ip}:${1:2};var@{src_port}:${1:3};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000133</id>
+      <normid>1343225856</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Software Usage</message>
+      <description>142Aug 30 07:40:52 tds-sensor bro_software 1472542851.468504	10.10.200.10	-	HTTP::BROWSER	Microsoft-CryptoAPI	6	1	-	-	-	Microsoft-CryptoAPI/6.1</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Software Usage";adsid:522;content:"bro_software";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{AppID}:${1:4};var@{firsttime}:${1:1};var@{Object_Type}:${1:11};var@{ObjectID}:${1:5};var@{src_ip}:${1:2};)]]></text>
+    </rule>
+    <rule>
+      <id>5000123</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO SSL Handshake</message>
+      <description>&lt;142&gt;Dec  9 20:43:46 tds-sensor bro_ssl 1481316222.480223	CZfXBk3WbivH85O27	10.10.24.94	55704	172.217.26.174	443	TLSv12	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256	-	docs.google.com	T	-	http/1.1	T	-	-	-	-	-	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO SSL Handshake";adsid:522;content:"bro_ssl";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{AppID}:${1:11};var@{Client_Version}:${1:3};var@{Creator_Name}:${1:6};var@{External_Hostname}:${1:5};var@{firsttime}:${1:1};var@{Method}:${1:9};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000165</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO SOCKS Proxy Request</message>
+      <description>Dec 10 02:36:00 tds-sensor bro_socks 1481337086.305395	Czhei13C3SVFdzuQo3	10.10.0.191	50329	10.10.3.11	64822	5	-	-	succeeded	-	-	-	-	\x00\x00\x00\x8c\x00L\x00\x02\x00\x00\x00\x14\x00\x00\x00\x00	0</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO SOCKS Proxy Request";adsid:522;content:"bro_socks";pcre:"(\d{10}\x2e\d{6})\t[^\t]+\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)";var@{action}:${1:9};var@{dst_ip}:${1:4};var@{dst_port}:${1:5};var@{firsttime}:${1:1};var@{src_ip}:${1:2};var@{src_port}:${1:3};var@{UserIDSrc}:${1:7};var@{Version}:${1:6};fmt@firsttime:"%s.%.6f";map@action:"succeeded"="8","failed"="9";)]]></text>
+    </rule>
+    <rule>
+      <id>5000159</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO SNMP Traffic</message>
+      <description>142Dec  9 21:10:22 tds-sensor bro_snmp 1481317761.176853	CsPTZa2u2d3HEhr3jj	10.10.0.111	34883	10.10.48.1	161	0.000055	2c	ir_SNMP-FFx	3	0	3	0	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO SNMP Traffic";adsid:522;content:"bro_snmp";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{action}:"pass";var@{Description}:${1:9};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{Elapsed_Time}:${1:7};var@{firsttime}:${1:1};var@{protocol}:"SNMP";var@{src_ip}:${1:3};var@{src_port}:${1:4};fmt@firsttime:"%s.%.6f";map@{action=1}:"pass"="1","Notice::ACTION_LOG"="5";)]]></text>
+    </rule>
+    <rule>
+      <id>5000121</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Remote Desktop (RDP) Session</message>
+      <description>Jun  7 11:00:14 log-server bro_rdp: 1465203756.643140	CErqbnDtMEaopWnHl	10.10.200.66	64816	10.20.24.106	3389	-	encrypted	HYBRID	-	-	-	-	-	-	-	-	0	-	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Remote Desktop (RDP) Session";adsid:522;content:"bro_rdp";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t(\d+)\t([^\t]+)\t(\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{firsttime}:${1:1};var@{Method}:${1:8};var@{src_ip}:${1:3};var@{src_port}:${1:4};var@{UserIDSrc}:${1:7};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000124</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Notice Log</message>
+      <description>Jun 12 11:00:15 log-server bro_notice: 1465185731.101493	Cg9uOW1Zyf66U0KuP	10.10.200.13	52637	52.21.57.191	443	-	-	-	tcp	SSL::Invalid_Server_Cert	SSL certificate validation failed with (self signed certificate in certificate chain)	CN=*.dropbox.com,OU=Domain Control Validated	10.10.200.13	52.21.57.191	443	-	worker-1-4	Notice::ACTION_LOG	3600.000000	F	-	-	-	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Notice Log";adsid:522;content:"bro_notice";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{action}:${1:19};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{Event_Class}:${1:11};var@{firsttime}:${1:1};var@{Message_Text}:${1:12};var@{Method}:${1:16};var@{protocol}:${1:10};var@{Reason}:${1:13};var@{Sensor_Name}:${1:18};var@{sigdesc}:"Bro Notice "${1:11};var@{src_ip}:${1:3};var@{src_port}:${1:4};fmt@firsttime:"%s.%.6f";map@{action=5}:"Notice::ACTION_DROP"="3","Notice::ACTION_LOG"="5";)]]></text>
+    </rule>
+    <rule>
+      <id>5000160</id>
+      <normid>402653184</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO NTLM Authentication</message>
+      <description>Dec  9 23:30:20 tds-sensor bro_ntlm 1481326217.946912	CO538C16Cj985RVfLg	10.10.200.44	52144	10.10.0.103	445	IRPW-R902MPTM$	IRPW-R902MPTM	INFORELIANCE	F	LOGON_FAILURE
+Dec  9 23:10:22 tds-sensor bro_ntlm 1481325021.698959	C6hEtL9Ji8S8M0FC4	10.10.200.44	51570	10.10.0.103	445	IRPW-R902MPTM$	IRPW-R902MPTM	INFORELIANCE	F	LOGON_FAILURE</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO NTLM Authentication";adsid:522;content:"bro_ntlm";pcre:"(\d{10}\x2e\d{6})\t[^\t]+\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)";var@{action}:${1:9};var@{dst_ip}:${1:4};var@{dst_port}:${1:5};var@{DomainID}:${1:8};var@{firsttime}:${1:1};var@{HostID}:${1:7};var@{Response_Code}:${1:10};var@{src_ip}:${1:2};var@{src_port}:${1:3};var@{UserIDSrc}:${1:6};fmt@firsttime:"%s.%.6f";map@{action=5}:"T"="8","F"="9";)]]></text>
+    </rule>
+    <rule>
+      <id>5000169</id>
+      <normid>1343225856</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Log Spam</message>
+      <description>&lt;142&gt;Dec 10 13:16:30 tds-sensor bro_pe #unset_field	-
+&lt;142&gt;Dec 10 04:15:54 tds-sensor bro_socks #empty_field	(empty)</description>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Log Spam";adsid:522;content:"field";pcre:"(\x23(unset|empty)\x5ffield)";var@{action}:${1:1};fmt@firsttime:"%s.%.6f";map@{action=13}:"#empty_field"="13";)]]></text>
+    </rule>
+    <rule>
+      <id>5000161</id>
+      <normid>1343225856</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Log Separator</message>
+      <description>Dec 10 00:00:33 tds-sensor bro_notice #separator \x09
+&lt;142&gt;Dec 10 03:41:52 tds-sensor bro_certs #set_separator	,</description>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Log Separator";adsid:522;content:"separator";pcre:"(\x23(?:set\x5f)?separator)";var@{action}:${1:1};fmt@firsttime:"%s.%.6f";map@{action=13}:"#separator"="13";)]]></text>
+    </rule>
+    <rule>
+      <id>5000172</id>
+      <normid>1343225856</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Log Path</message>
+      <description>Feb 10 14:02:26 tds-sensor bro_services #path	known_services</description>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Log Path";adsid:522;content:"#path";pcre:"(\x23path\s+\S+)";var@{Message_Text}:${1:1};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000175</id>
+      <normid>1343225856</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Log Opened</message>
+      <description>&lt;142&gt;Feb 10 17:02:21 tds-sensor bro_pe #open	2017-02-10-17-02-21</description>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Log Opened";adsid:522;content:"open";pcre:"(\x23open)";var@{action}:${1:1};fmt@firsttime:"%s.%.6f";map@{action=19}:"#open"="19";)]]></text>
+    </rule>
+    <rule>
+      <id>5000168</id>
+      <normid>1343225856</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Log Closed</message>
+      <description>142Dec 10 04:00:00 tds-sensor bro_conn #close	2016-12-10-04-00-00</description>
+      <origin>1</origin>
+      <severity>1</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Log Closed";adsid:522;content:"#close";pcre:"(\x23close)";var@{action}:${1:1};fmt@firsttime:"%s.%.6f";map@{action=13}:"#close"="20";)]]></text>
+    </rule>
+    <rule>
+      <id>5000170</id>
+      <normid>1610612736</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Known Host</message>
+      <description>Dec 10 04:35:16 tds-sensor bro_hosts 1481344514.938241	10.10.50.15</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Known Host";adsid:522;content:"bro_hosts";pcre:"(\d{10}\x2e\d{6})\t([^\t]+)";var@{firsttime}:${1:1};var@{src_ip}:${1:2};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000110</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Internal to Internal Connection</message>
+      <description>Jun  7 11:00:13 log-server bro_conn: 1465185583.656190	CvRYeW2ncsN0i5N8c6	10.20.8.52	53226	10.10.1.216	445	tcp	-	10.541879	3941	1513	RSTO	T	T	0	ShADdaR	13	4473	9	1885	(empty)</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Internal to Internal Connection";adsid:522;content:"bro_conn";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t(\d+)\t([^\t]+)\t(\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(T)\t(T)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{AppID}:${1:8};var@{Bytes_Received}:${1:11};var@{Bytes_Sent}:${1:10};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{Elapsed_Time}:${1:9};var@{firsttime}:${1:1};var@{protocol}:${1:7};var@{session_id}:${1:2};var@{src_ip}:${1:3};var@{src_port}:${1:4};var@{Status}:${1:12};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000132</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Internal to External Connection</message>
+      <description>Jun  7 11:00:13 log-server bro_conn: 1465185583.656190	CvRYeW2ncsN0i5N8c6	10.20.8.52	53226	10.10.1.216	445	tcp	-	10.541879	3941	1513	RSTO	F	T	0	ShADdaR	13	4473	9	1885	(empty)</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Internal to External Connection";adsid:522;content:"bro_conn";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t(\d+)\t([^\t]+)\t(\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(T)\t(F)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{AppID}:${1:8};var@{Bytes_Received}:${1:11};var@{Bytes_Sent}:${1:10};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{Elapsed_Time}:${1:9};var@{firsttime}:${1:1};var@{protocol}:${1:7};var@{session_id}:${1:2};var@{src_ip}:${1:3};var@{src_port}:${1:4};var@{Status}:${1:12};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000164</id>
+      <normid>1344274432</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Host Service Activity</message>
+      <description>Dec  9 21:28:52 tds-sensor bro_services 1481318930.195273	10.10.200.28	139	tcp	GSSAPI</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Host Service Activity";adsid:522;content:"bro_services";pcre:"(\d{10}\x2e\d{6})\t([^\t)]+)\t([^\t)]+)\t([^\t)]+)\t([^\t)]+)";var@{firsttime}:${1:1};var@{protocol}:${1:4};var@{Service_Name}:${1:5};var@{src_ip}:${1:2};var@{src_port}:${1:3};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000118</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO File Transfer - Internal to External</message>
+      <description>Jun  7 11:00:19 log-server bro_files: 1465185599.516103	F6Icuh4l9304NmeaOc	216.58.220.46	10.10.90.7	CLu6O72Oh6X29nLaPf	SSL	0	X509,MD5,SHA1	application/mime	-	0.000000	T	F	1227	-	0	0	F	-	121e3df396ae46a62dd94816884899c3	5e36c26705b5e0cd2453adcecc88ebd7e28c31be	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO File Transfer - Internal to External";adsid:522;content:"bro_files";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(T)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{AppID}:${1:9};var@{dst_ip}:${1:4};var@{Elapsed_Time}:${1:11};var@{Filename}:${1:10};var@{firsttime}:${1:1};var@{Hash}:${1:20};var@{Sensor_Type}:${1:8};var@{SHA1}:${1:21};var@{src_ip}:${1:3};var@{Source_Context}:${1:6};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000119</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO File Transfer - External to Internal</message>
+      <description>Jun  7 11:00:19 log-server bro_files: 1465185599.516103	F6Icuh4l9304NmeaOc	216.58.220.46	10.10.90.7	CLu6O72Oh6X29nLaPf	SSL	0	X509,MD5,SHA1	application/mime	-	0.000000	F	T	1227	-	0	0	F	-	121e3df396ae46a62dd94816884899c3	5e36c26705b5e0cd2453adcecc88ebd7e28c31be	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO File Transfer - External to Internal";adsid:522;content:"bro_files";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(F)\t(T)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{AppID}:${1:9};var@{dst_ip}:${1:4};var@{Elapsed_Time}:${1:11};var@{Filename}:${1:10};var@{firsttime}:${1:1};var@{Hash}:${1:20};var@{Sensor_Type}:${1:8};var@{SHA1}:${1:21};var@{src_ip}:${1:3};var@{Source_Context}:${1:6};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000131</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO File Transfer</message>
+      <description>142Aug 30 04:05:25 tds-purple-lizard-1 bro_files 1472526501.966992	FzfqQZ2rGuXyLgeuS3	209.53.113.223	10.240.31.250	C3tW59Ss9YqYVo2bg	HTTP	0	MD5,SHA1	-	-	0.000000	F	F	29	29	0	0	F	-	f51855a681234b33d2528134fd127f43	ee5bf5b6bb8378351a3e4b9e49156d6e257f0cf1	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO File Transfer";adsid:522;content:"bro_files";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{AppID}:${1:9};var@{dst_ip}:${1:4};var@{Elapsed_Time}:${1:11};var@{Filename}:${1:10};var@{firsttime}:${1:1};var@{Hash}:${1:20};var@{Sensor_Type}:${1:8};var@{SHA1}:${1:21};var@{src_ip}:${1:3};var@{Source_Context}:${1:6};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000158</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO FTP</message>
+      <description>Dec  9 15:00:16 tds-sensor bro_ftp 1481295614.662947	CDiFot2TOBvBiLgzMl	10.10.7.250	35206	172.16.12.67	21	svc.ftpmon	hidden	EPSV	-	-	-	500	'EPSV': command not understood.	-	-	-	-	-</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO FTP";adsid:522;content:"bro_ftp";pcre:"(\d{10}\x2e\d{6})\t[^\t]+\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(([^\x2e\x28]+)|[^\t]+)";var@{CommandID}:${1:8};var@{dst_ip}:${1:4};var@{dst_port}:${1:5};var@{firsttime}:${1:1};var@{Message_Text}:${1:13};var@{ObjectID}:${1:9};var@{Response_Code}:${1:12};var@{sigdesc}:"BRO FTP: "${1:14};var@{src_ip}:${1:2};var@{src_port}:${1:3};var@{Total_Bytes}:${1:11};var@{UserIDSrc}:${1:6};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000112</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO External to Internal Connection</message>
+      <description>Jun  7 11:00:13 log-server bro_conn: 1465185583.656190	CvRYeW2ncsN0i5N8c6	10.20.8.52	53226	10.10.1.216	445	tcp	-	10.541879	3941	1513	RSTO	F	T	0	ShADdaR	13	4473	9	1885	(empty)</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO External to Internal Connection";adsid:522;content:"bro_conn";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t(\d+)\t([^\t]+)\t(\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(F)\t(T)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{AppID}:${1:8};var@{Bytes_Received}:${1:11};var@{Bytes_Sent}:${1:10};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{Elapsed_Time}:${1:9};var@{firsttime}:${1:1};var@{protocol}:${1:7};var@{session_id}:${1:2};var@{src_ip}:${1:3};var@{src_port}:${1:4};var@{Status}:${1:12};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000111</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO External Connection</message>
+      <description>Jun  7 11:00:13 log-server bro_conn: 1465185583.656190	CvRYeW2ncsN0i5N8c6	10.20.8.52	53226	10.10.1.216	445	tcp	-	10.541879	3941	1513	RSTO	F	F	0	ShADdaR	13	4473	9	1885	(empty)</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO External Connection";adsid:522;content:"bro_conn";pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t(\d+)\t([^\t]+)\t(\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t(F)\t(F)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{AppID}:${1:8};var@{Bytes_Received}:${1:11};var@{Bytes_Sent}:${1:10};var@{dst_ip}:${1:5};var@{dst_port}:${1:6};var@{Elapsed_Time}:${1:9};var@{firsttime}:${1:1};var@{protocol}:${1:7};var@{session_id}:${1:2};var@{src_ip}:${1:3};var@{src_port}:${1:4};var@{Status}:${1:12};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000163</id>
+      <normid>810549248</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Executable Detected</message>
+      <description>Dec  9 23:15:29 tds-sensor bro_pe 1481325324.651788	FjYGy04X7zmiv0cXQb	I386	1418078699.000000	Windows XP	WINDOWS_GUI	T	F	T	T	F	T	T	F	T	T	.text,.rdata,.data,.wixburn,.tls,.rsrc,.reloc</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Executable Detected";adsid:522;content:"bro_pe";pcre:"(\d{10}\x2e\d{6})\t[^\t]+\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)";var@{AppID}:${1:5};var@{File_Type}:${1:2};var@{firsttime}:${1:1};var@{Operating_System}:${1:4};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000130</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO DNS Query</message>
+      <description>Jun  7 11:01:13 log-server bro_dns: 1465185599.150536	CaVOFh3P8bAvmoiTfi	10.10.0.1	52491	10.10.0.103	53	udp	32655	www.google.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	64.233.189.106,64.233.189.103,64.233.189.104,64.233.189.99,64.233.189.105,64.233.189.147	81.000000,81.000000,81.000000,81.000000,81.000000,81.000000	F</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO DNS Query";adsid:522;content:"bro_dns";pcre;pcre:"(\d+\x2e\d+)\t([^\t]+)\t([^\t]+)\t(\d+)\t([^\t]+)\t(\d+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\s]+)";var@{dst_ip}:${2:5};var@{dst_port}:${2:6};var@{DNS.Query}:${2:10};var@{DNS_Class}:${2:11};var@{DNS_Name}:${2:9};var@{DNS_Type}:${2:13};var@{firsttime}:${2:1};var@{protocol}:${2:7};var@{Query_Response}:${2:15};var@{session_id}:${2:8};var@{src_ip}:${2:3};var@{src_port}:${2:4};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+    <rule>
+      <id>5000134</id>
+      <normid>1088421888</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO DHCP Activity</message>
+      <description>&lt;142&gt;Aug 30 09:52:04 tds-purple-lizard-1 bro_dhcp 1472525891.932605	CekydL3U781WH1iT6e	10.255.224.4	67	10.252.2.228	67	a8:88:08:ae:db:3e	10.255.242.12	14400.000000	2659003693</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO DHCP Activity";adsid:522;content:"bro_dhcp";pcre:"(\d{10}\x2e\d{6})\t[^\t]+\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t[^\t]+\t[^\t]+";var@{dst_ip}:${1:4};var@{dst_mac}:${1:6};var@{dst_port}:${1:5};var@{Device_IP}:${1:7};var@{firsttime}:${1:1};var@{src_ip}:${1:2};var@{src_port}:${1:3};)]]></text>
+      <tag origin="0">1835280</tag>
+    </rule>
+    <rule>
+      <id>5000174</id>
+      <normid>1085276160</normid>
+      <revision>0</revision>
+      <sid>0</sid>
+      <class>2</class>
+      <message>BRO Cert Exchanged</message>
+      <description>&lt;142&gt;Feb 10 15:14:57 tds-sensor bro_certs 1486739695.180965	10.10.0.110	443	CN=PRTG Demo Certificate,O=PRTG Demo Certificate	CN=PRTG Demo Certificate,O=PRTG Demo Certificate	C336246C10E3F8AA</description>
+      <origin>1</origin>
+      <severity>25</severity>
+      <type>1</type>
+      <action>5</action>
+      <action_initial>5</action_initial>
+      <action_disallowed>0</action_disallowed>
+      <other_bits_default>4</other_bits_default>
+      <other_bits_disallowed>0</other_bits_disallowed>
+      <text><![CDATA[any any any -> any any (msg:"BRO Cert Exchanged";adsid:522;content:"bro_certs";pcre:"(\d{10}\x2e\d{6})\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)";var@{dst_ip}:${1:2};var@{dst_port}:${1:3};var@{firsttime}:${1:1};var@{Hash}:${1:6};var@{ObjectID}:${1:4};fmt@firsttime:"%s.%.6f";)]]></text>
+    </rule>
+  </rules>
+</nitro_policy>
